@@ -1,0 +1,289 @@
+.mhy-account-flow-dialog {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  line-height: 1.5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 14px;
+  font-family: Microsoft YaHei, \\5fae\8f6f\96c5\9ed1, miui, Helvetica, Arial,
+    sans-serif;
+}
+.mhy-account-flow-dialog-content {
+  width: 400px;
+  height: 466px;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 20px 25px;
+  position: relative;
+  top: 100px;
+  left: 500px;
+  margin-top: 58px;
+}
+.mhy-account-flow-login {
+  background-color: #fff;
+
+  /* width: 500px;
+  height: 500px; */
+}
+.mhy-account-flow-login .logo {
+  width: 107px;
+  height: 38px;
+  position: absolute;
+  top: -58px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.mhy-account-flow.is-pc .close-icon {
+  transform: translateX(370px);
+  width: 16px;
+  height: 16px;
+  margin: 10px;
+  cursor: pointer;
+}
+.mhy-account-flow.is-pc .mhy-account-flow-tabs {
+  font-size: 18px;
+}
+.mhy-account-flow-tabs .tab-item.active {
+  font-weight: 700;
+  color: #3c4044;
+}
+.mhy-account-flow-tabs .tab-item {
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  display: inline-block;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+}
+.mhy-account-flow-form-input {
+  padding-top: 15px;
+  font-size: 12px;
+  position: relative;
+}
+.mhy-account-flow-form-input .input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  border-radius: 4px;
+  border: 1px solid #ebebeb;
+}
+.mhy-account-flow.is-pc .mhy-account-flow-form-input .input-container input {
+  font-size: 16px;
+  line-height: 26px;
+}
+.mhy-account-flow-tabs.tabs-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: space-around;
+  justify-content: space-around;
+}
+.mhy-account-flow-tabs .tab-item.active:before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #19a3ff;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 0;
+}
+#mimaloginer {
+  font-weight: 700;
+  color: #3c4044;
+}
+#mimaloginer::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #3b4354;
+
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 0;
+}
+.mhy-account-flow-tabs {
+  width: 100%;
+  font-size: 14px;
+  border-bottom: 1px solid #f6f6f6;
+  position: relative;
+  color: #7f858a;
+}
+.mhy-account-flow.ys-theme .mhy-account-flow-tabs .tab-item.active:before {
+  background-color: #3b4354;
+}
+.mhy-account-flow-form-input .input-container input {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  min-width: 0;
+  width: 100%;
+  color: #3c4044;
+  padding: 10px 12px;
+  background-color: transparent;
+  outline: none;
+  line-height: 18px;
+  font-size: 12px;
+}
+.mhy-account-flow-form-input .input-container .input-inner-btn {
+  width: 84px;
+  text-align: center;
+  padding: 13px 0;
+  font-size: 12px;
+  color: #7f858a;
+  cursor: pointer;
+  line-height: 1;
+}
+.mhy-account-flow.is-pc
+  .mhy-account-flow-form-input
+  .input-container
+  .input-inner-btn {
+  font-size: 16px;
+  width: 120px;
+  line-height: 20px;
+}
+.mhy-account-flow-form-input .input-container .input-inner-btn:before {
+  content: "";
+  border-left: 1px solid #f6f6f6;
+  float: left;
+  height: 100%;
+}
+.mhy-account-flow.is-pc .mhy-account-flow-login .mhy-login-button {
+  margin-top: 25px;
+}
+.mhy-account-flow.is-pc button {
+  line-height: 48px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.login-btn {
+  transform: translateY(20px);
+  margin-bottom: 30px;
+}
+.mhy-account-flow.ys-theme button {
+  border-color: #3b4354;
+  background-color: #3b4354;
+}
+.mhy-account-flow button {
+  display: block;
+  width: 100%;
+  border: 1px solid #19a3ff;
+  background-color: #19a3ff;
+  color: #fff;
+  border-radius: 4px;
+  line-height: 38px;
+  text-align: center;
+  font-size: 14px;
+  outline: none;
+}
+.register-bar {
+  margin-bottom: 10px;
+}
+.login-tip {
+  position: relative;
+}
+.to-register {
+  position: relative;
+  left: 240px;
+}
+.mhy-account-flow.is-pc .mhy-account-flow-login .login-tip,
+.mhy-account-flow.is-pc .mhy-account-flow-login .register-bar {
+  font-size: 18px;
+}
+.login-tip a {
+  font-size: 16px;
+}
+.mhy-account-flow-login .register-bar {
+  font-size: 12px;
+  margin-top: 12px;
+}
+.mhy-account-flow a {
+  transform: translateY(50px);
+  text-decoration: none;
+  cursor: pointer;
+  color: #7f858a;
+  z-index: 999;
+}
+.mhy-account-flow.is-pc .mhy-account-flow-login .login-tip,
+.mhy-account-flow.is-pc .mhy-account-flow-login .register-bar {
+  font-size: 16px;
+}
+
+.mhy-account-flow-login .login-tip {
+  transform: translateY(20px);
+  font-size: 12px;
+  margin-top: 10px;
+}
+.mhy-account-flow * {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: initial;
+  -moz-user-select: initial;
+  -ms-user-select: initial;
+  user-select: auto;
+}
+
+#mimalogin {
+  position: relative;
+  top: -464px;
+}
+.mihoyo-cn-footer .footer-link a:first-child {
+  margin-left: 0;
+}
+
+.mihoyo-cn-footer .footer-info a.protocol {
+  color: #fff;
+}
+.footer a,
+.footer a:link,
+.footer a:visited,
+.footer a:active {
+  text-decoration: none;
+  color: #999;
+}
+.mihoyo-cn-footer .footer-link a {
+  margin: 0 8px 0 5px;
+}
+.mihoyo-cn-footer a,
+.mihoyo-cn-footer a:link,
+.mihoyo-cn-footer a:visited,
+.mihoyo-cn-footer a:active {
+  color: #999;
+  text-decoration: none;
+  font-size: 14px;
+}
+.mhy-toast {
+  position: fixed;
+  top: 50%;
+  transform: translateX(105px) translateY(-5px);
+  padding: 8px 14px;
+  background-color: rgba(0, 0, 0, 0.6);
+  line-height: 1.5;
+  max-width: 60%;
+  border-radius: 4px;
+  color: #fff;
+  z-index: 9999;
+  font-size: 14px;
+}

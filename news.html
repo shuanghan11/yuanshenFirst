@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>《原神》官网-踏入充满冒险的神奇世界</title>
+    <link rel="icon" type="image/x-icon" href="image\原神logo.ico" /><!--网页图标-->
+    <link rel="stylesheet" href="css\index.css" />
+	<link rel="stylesheet" href="css/font-index..css">
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/city.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/news.css">
+</head>
+<body>
+    <div class="header">
+		<div class="audio-controller" id="audiu_on">
+			<img src="image/播放开.png" style="width: 100%;" id="audio_headerimg"/>
+			<audio id="bgMusic">
+				<source src="audio/原神官网视频 - 1.最终版(Av55055298,P1).mp3" type="audio/mp3">
+			</audio>
+		</div>
+		<div class="audio-controller" id="audio_off" style="display: none;">
+			<img src="image/播放关.png" style="width: 100%;" id="audio_headerimg"/>
+			<audio id="bgMusic">
+				<source src="audio/原神官网视频 - 1.最终版(Av55055298,P1).mp3" type="audio/mp3">
+			</audio>
+		</div>
+		<div class="header__logo--cut">
+			<img src="image/原神主页logo.png">
+		</div>
+		<div class="header__navbar">
+			<div class="header_Cloud"></div>
+			<div class="header_navitem">
+				<a class="header_hover" href="index.html">首&nbsp页</a>
+				<a>新&nbsp闻</a>
+				<a>角&nbsp色</a>
+				<a>世&nbsp界</a>
+				<a>漫&nbsp画</a>
+				<a>社&nbsp区</a>
+			</div>
+		</div>
+		<button class="header__login">
+			<span>登&nbsp录</span>
+			<img src="image/登录.png">
+		</button>
+		<div class="mhy-account-flow mhy-account-flow-dialog ys-theme is-pc" style="display: none;" id="login">
+			<div class="mhy-account-flow-dialog-content">
+				<div class="mhy-account-flow-login">
+					<img src="image/mihuayouLOGo.png" class="logo">
+					<img src="image/X.png" class="close-icon">
+				</div>
+				<div class="mhy-account-flow-tabs tabs-flex">
+					<div class="tab-item active">
+						<span>验证码登录</span>
+					</div>
+					<div class="tab-item">
+						<span id="mimaloginers">密码登录</span>
+					</div>
+				</div>
+				<form>
+					<div class="mhy-account-flow-form-input">
+						<div class="input-container">
+							<input type="tel" placeholder="手机号注册/登录" id="containerinput" maxlength="11">
+						</div>
+						<p class="error-text">*手机号不能为空</p>
+						<p class="error-text" style="display: none;" id="MobilePhoneFormat">*手机格式错误</p>
+					</div>
+					<div class="mhy-account-flow-form-input">
+						<div class="input-container">
+							<div class="mhy-toast" style="display: none;">请输入正确的手机号</div>
+							<input type="tel" placeholder="验证码" maxlength="6">
+							<div class="input-inner-btn captcha-login-inner-btn" id="VerificationCode">
+								获取验证码
+							</div>
+						</div>
+					</div>
+					<div></div>
+					<div class="mhy-login-button">
+						<button type="submit" class="login-btn">登录</button>
+					</div>
+				</form>
+				<div class="register-bar">
+					<a href="">登录遇到问题？</a>
+					<a href="" class="to-register">立即注册</a>
+				</div>
+				<p class="login-tip">
+					<span>未注册的手机验证后将自动登录。注册/登录即代表<br>您同意并遵守</span>
+					<a>《米哈游通行证用户服务协议》</a>
+					<a href="">《米<br>哈游通行证用户个人信息及隐私保护政策》</a>
+				</p>
+			</div>
+			<!-- 密码登录 -->
+			<div class="mhy-account-flow-dialog-content" id="mimalogin" style="display: none;">
+				<div class="mhy-account-flow-login">
+					<img src="image/mihuayouLOGo.png" class="logo">
+					<img src="image/X.png" class="close-icon" id="x2">
+				</div>
+				<div class="mhy-account-flow-tabs tabs-flex">
+					<div class="tab-item">
+						<span id="yzmloginer">验证码登录</span>
+					</div>
+					<div class="tab-item">
+						<span id="mimaloginer">密码登录</span>
+					</div>
+				</div>
+				<form>
+					<div class="mhy-account-flow-form-input">
+						<div class="input-container">
+							<input type="tel" placeholder="手机号/邮箱">
+						</div>
+					</div>
+					<div class="mhy-account-flow-form-input">
+						<div class="input-container">
+							<input type="tel" placeholder="密码" maxlength="6">
+							<div class="input-inner-btn captcha-login-inner-btn">
+								
+							</div>
+						</div>
+					</div>
+					<div></div>
+					<div class="mhy-login-button">
+						<button type="submit" class="login-btn">登录</button>
+					</div>
+				</form>
+				<div class="register-bar">
+					<a href="">登录遇到问题？</a>
+					<a href="" class="to-register">立即注册</a>
+				</div>
+				<p class="login-tip">
+					<span>登录即代表您同意并遵守<br>您同意并遵守</span>
+					<a>《米哈游通行证用户服务协议》</a>
+					<a href="">《米<br>哈游通行证用户个人信息及隐私保护政策》</a>
+				</p>
+			</div>
+		</div>
+    </div>
+	<div class="social">
+		<ul class="social_wx">
+			<button class="social__btn_off">
+				<img src="image/箭头.png" class="social__btn_on_img1">
+			</button>
+			<button class="social__btn_on" style="display: none;">
+				<img src="image/箭头.png" class="social__btn_on_img2">
+				<!-- transform: rotate(-180deg); -->
+			</button>
+			<li class="social_first">
+				<p class="wenzi1">关注我们</p>
+				<img src="image/微信二维码.png">
+				<p class="wenzi2">扫描关注微信</p>
+			</li>
+			<li class="social__item">
+				<p>官方微博</p>
+			</li>
+			<li class="social__item">
+				<p>TapTap</p>
+			</li>
+			<li class="social__item">
+				<p>官方社区</p>
+			</li>
+		</ul>
+	</div>
+
+    <div class="content-wrap">
+        <div class="news_index content-body" style="background-position-y: 0px;">
+            <img src="image/newsimg/newsbg.jpg">
+            <img src="image/newsimg/news背景.jpg" class="newsbj">
+            <div class="body">
+                <ul class="recommend">
+                    <li class="recommend__item" title="《原神》微博超话2.2版本第二期签到活动现已上线">
+                        <a class="news__title ellipsis">
+                            <div class="recommend__imgwrap">
+                                <img class="recommend__img coverFit" src="image/newsimg/刻晴.png">
+                            </div>
+                            <div class="recommend__title">刻晴生日快乐｜这是…送给我的金丝虾球？</div>
+                            <p class="recommend__summary"></p>
+                        </a>
+                        <div class="recommend__meta">
+                            <span class="recommend__date">2021/11/20</span>
+                            <span class="recommend__category news__cate-2">新闻</span>
+                        </div>
+                    </li>
+                    <li class="recommend__item" title="《原神》微博超话2.2版本第二期签到活动现已上线">
+                        <a class="news__title ellipsis">
+                            <div class="recommend__imgwrap">
+                                <img class="recommend__img coverFit" src="image/newsimg/蒙德茶会.jpg">
+                            </div>
+                            <div class="recommend__title">《原神》小剧场——「蒙德茶会」第四期</div>
+                            <p class="recommend__summary"></p>
+                        </a>
+                        <div class="recommend__meta">
+                            <span class="recommend__date">2021/11/19</span>
+                            <span class="recommend__category news__cate-2">新闻</span>
+                        </div>
+                    </li>
+                    <li class="recommend__item" title="《原神》微博超话2.2版本第二期签到活动现已上线">
+                        <a class="news__title ellipsis">
+                            <div class="recommend__imgwrap">
+                                <img class="recommend__img coverFit" src="image/newsimg/派梦的十万个为什么.jpg">
+                            </div>
+                            <div class="recommend__title">「派蒙的十万个为什么」答题活动正式开启</div>
+                            <p class="recommend__summary"></p>
+                        </a>
+                        <div class="recommend__meta">
+                            <span class="recommend__date">2021/11/19</span>
+                            <span class="recommend__category news__cate-2">新闻</span>
+                        </div>
+                    </li>
+                </ul>
+               <ul class="category">
+                   <li class="category__item"><a class="category__link">最新</a></li>
+                   <li class="category__item"><a class="category__link">新闻</a></li>
+                   <li class="category__item"><a class="category__link">公告</a></li>
+                   <li class="category__item"><a class="category__link">活动</a></li>
+               </ul>
+               
+               <!-- news区块 -->
+               <ul class="news">
+                 <!-- 最新 -->
+                <ul class="news">
+                    <li class="news__item news__tag-2" >
+                        <a class="news__title news__content ellipsis">
+                            <img class="coverFit" src="image/newsimg/刻晴.png">
+                            <div class="news__info">
+                                <h3 class="ellipsis" title="刻晴生日快乐｜这是…送给我的金丝虾球？">刻晴生日快乐｜这是…送给我的金丝虾球？</h3>
+                                <p class="news__summary"></p>
+                            </div>
+                        </a>
+                        <div class="news__meta">
+                            <div class="news__date">2021/11/04</div>
+                            <a class="news__category news__cate-2">新闻</a>
+                        </div>
+                    </li>
+                    <li class="news__item news__tag-2">
+                        <a class="news__title news__content ellipsis">
+                            <img class="coverFit" src="image/newsimg/蒙德茶会.jpg">
+                            <div class="news__info">
+                                <h3 class="ellipsis" title="《原神》小剧场——「蒙德茶会」第四期">《原神》小剧场——「蒙德茶会」第四期</h3>
+                                <p class="news__summary"></p>
+                            </div>
+                        </a>
+                        <div class="news__meta">
+                            <div class="news__date">2021/11/04</div>
+                            <a class="news__category news__cate-2">新闻</a>
+                        </div>
+                    </li>
+                    <li class="news__item news__tag-2">
+                        <a class="news__title news__content ellipsis">
+                            <img class="coverFit" src="image/newsimg/派梦的十万个为什么.jpg">
+                            <div class="news__info">
+                                <h3 class="ellipsis" title="「派蒙的十万个为什么」答题活动正式开启">「派蒙的十万个为什么」答题活动正式开启</h3>
+                                <p class="news__summary"></p>
+                            </div>
+                        </a>
+                        <div class="news__meta">
+                            <div class="news__date">2021/11/04</div>
+                            <a class="news__category news__cate-2">新闻</a>
+                        </div>
+                    </li>
+                    <li class="news__item news__tag-2" >
+                        <a class="news__title news__content ellipsis">
+                            <img class="coverFit" src="image/newsimg/派蒙.jpg">
+                            <div class="news__info">
+                                <h3 class="ellipsis" title="《原神》预下载即将开启">《原神》预下载即将开启</h3>
+                                <p class="news__summary"></p>
+                            </div>
+                        </a>
+                        <div class="news__meta">
+                            <div class="news__date">2021/11/04</div>
+                            <a class="news__category news__cate-2">新闻</a>
+                        </div>
+                    </li>
+                    <li class="news__item news__tag-2" >
+                        <a class="news__title news__content ellipsis">
+                            <img class="coverFit" src="image/newsimg/尤拉.png">
+                            <div class="news__info">
+                                <h3 class="ellipsis" title="《原神》「浪沫的旋舞」优菈角色主题同人征集活动今日开启">《原神》「浪沫的旋舞」优菈角色主题同人征集活动今日开启</h3>
+                                <p class="news__summary"></p>
+                            </div>
+                        </a>
+                        <div class="news__meta">
+                            <div class="news__date">2021/11/04</div>
+                            <a class="news__category news__cate-2">新闻</a>
+                        </div>
+                    </li>
+                   </ul>
+                   <!-- 新闻 -->
+                   <ul class="news" style="display: none;">
+                    <li class="news__item news__tag-2" >
+                        <a class="news__title news__content ellipsis">
+                            <img class="coverFit" src="image/newsimg/阿贝多.jpg">
+                            <div class="news__info">
+                                <h3 class="ellipsis" title="刻晴生日快乐｜这是…送给我的金丝虾球？">刻晴生日快乐｜这是…送给我的金丝虾球？</h3>
+                                <p class="news__summary"></p>
+                            </div>
+                        </a>
+                        <div class="news__meta">
+                            <div class="news__date">2021/11/04</div>
+                            <a class="news__category news__cate-2">新闻</a>
+                        </div>
+                    </li>
+                    <li class="news__item news__tag-2">
+                        <a class="news__title news__content ellipsis">
+                            <img class="coverFit" src="image/newsimg/蒙德茶会.jpg">
+                            <div class="news__info">
+                                <h3 class="ellipsis" title="《原神》小剧场——「蒙德茶会」第四期">《原神》小剧场——「蒙德茶会」第四期</h3>
+                                <p class="news__summary"></p>
+                            </div>
+                        </a>
+                        <div class="news__meta">
+                            <div class="news__date">2021/11/04</div>
+                            <a class="news__category news__cate-2">新闻</a>
+                        </div>
+                    </li>
+                    <li class="news__item news__tag-2">
+                        <a class="news__title news__content ellipsis">
+                            <img class="coverFit" src="image/newsimg/派梦的十万个为什么.jpg">
+                            <div class="news__info">
+                                <h3 class="ellipsis" title="「派蒙的十万个为什么」答题活动正式开启">「派蒙的十万个为什么」答题活动正式开启</h3>
+                                <p class="news__summary"></p>
+                            </div>
+                        </a>
+                        <div class="news__meta">
+                            <div class="news__date">2021/11/04</div>
+                            <a class="news__category news__cate-2">新闻</a>
+                        </div>
+                    </li>
+                    <li class="news__item news__tag-2" >
+                        <a class="news__title news__content ellipsis">
+                            <img class="coverFit" src="image/newsimg/派蒙.jpg">
+                            <div class="news__info">
+                                <h3 class="ellipsis" title="《原神》预下载即将开启">《原神》预下载即将开启</h3>
+                                <p class="news__summary"></p>
+                            </div>
+                        </a>
+                        <div class="news__meta">
+                            <div class="news__date">2021/11/04</div>
+                            <a class="news__category news__cate-2">新闻</a>
+                        </div>
+                    </li>
+                    <li class="news__item news__tag-2" >
+                        <a class="news__title news__content ellipsis">
+                            <img class="coverFit" src="image/newsimg/祈愿概率.png">
+                            <div class="news__info">
+                                <h3 class="ellipsis" title="《原神》「浪沫的旋舞」优菈角色主题同人征集活动今日开启">《原神》「浪沫的旋舞」优菈角色主题同人征集活动今日开启</h3>
+                                <p class="news__summary"></p>
+                            </div>
+                        </a>
+                        <div class="news__meta">
+                            <div class="news__date">2021/11/04</div>
+                            <a class="news__category news__cate-2">新闻</a>
+                        </div>
+                    </li>
+                   </ul>
+                   <!-- 公告 -->
+                   <ul class="news" style="display: none;">
+                    <li class="news__item news__tag-2" >
+                        <a class="news__title news__content ellipsis">
+                            <img class="coverFit" src="image/newsimg/祈愿概率.png">
+                            <div class="news__info">
+                                <h3 class="ellipsis" title="《原神》祈愿概率公示">《原神》祈愿概率公示</h3>
+                                <p class="news__summary"></p>
+                            </div>
+                        </a>
+                        <div class="news__meta">
+                            <div class="news__date">2021/11/04</div>
+                            <a class="news__category news__cate-2">新闻</a>
+                        </div>
+                    </li>
+                    <li class="news__item news__tag-2" >
+                        <a class="news__title news__content ellipsis">
+                            <img class="coverFit" src="image/newsimg/尤拉.png">
+                            <div class="news__info">
+                                <h3 class="ellipsis" title="《原神》「浪沫的旋舞」优菈角色主题同人征集活动今日开启">《原神》「浪沫的旋舞」优菈角色主题同人征集活动今日开启</h3>
+                                <p class="news__summary"></p>
+                            </div>
+                        </a>
+                        <div class="news__meta">
+                            <div class="news__date">2021/11/04</div>
+                            <a class="news__category news__cate-2">新闻</a>
+                        </div>
+                    </li>
+                    <li class="news__item news__tag-2" >
+                        <a class="news__title news__content ellipsis">
+                            <img class="coverFit" src="image/newsimg/祈愿概率.png">
+                            <div class="news__info">
+                                <h3 class="ellipsis" title="《原神》祈愿概率公示">《原神》祈愿概率公示</h3>
+                                <p class="news__summary"></p>
+                            </div>
+                        </a>
+                        <div class="news__meta">
+                            <div class="news__date">2021/11/04</div>
+                            <a class="news__category news__cate-2">新闻</a>
+                        </div>
+                    </li>
+                    <li class="news__item news__tag-2" >
+                        <a class="news__title news__content ellipsis">
+                            <img class="coverFit" src="image/newsimg/尤拉.png">
+                            <div class="news__info">
+                                <h3 class="ellipsis" title="《原神》「浪沫的旋舞」优菈角色主题同人征集活动今日开启">《原神》「浪沫的旋舞」优菈角色主题同人征集活动今日开启</h3>
+                                <p class="news__summary"></p>
+                            </div>
+                        </a>
+                        <div class="news__meta">
+                            <div class="news__date">2021/11/04</div>
+                            <a class="news__category news__cate-2">新闻</a>
+                        </div>
+                    </li>
+                    <li class="news__item news__tag-2">
+                        <a class="news__title news__content ellipsis">
+                            <img class="coverFit" src="image/newsimg/蒙德茶会.jpg">
+                            <div class="news__info">
+                                <h3 class="ellipsis" title="《原神》小剧场——「蒙德茶会」第四期">《原神》小剧场——「蒙德茶会」第四期</h3>
+                                <p class="news__summary"></p>
+                            </div>
+                        </a>
+                        <div class="news__meta">
+                            <div class="news__date">2021/11/04</div>
+                            <a class="news__category news__cate-2">新闻</a>
+                        </div>
+                    </li>
+                    </ul>
+
+                    <!-- 活动 -->
+                    <ul class="news" style="display: none;">
+                        <li class="news__item news__tag-2">
+                            <a class="news__title news__content ellipsis">
+                                <img class="coverFit" src="image/newsimg/岩港奇珍行记.jpg">
+                                <div class="news__info">
+                                    <h3 class="ellipsis" title="《原神》「古时孤影」活动即将开启">《原神》「古时孤影」活动即将开启</h3>
+                                    <p class="news__summary"></p>
+                                </div>
+                            </a>
+                            <div class="news__meta">
+                                <div class="news__date">2021/11/04</div>
+                                <a class="news__category news__cate-2">新闻</a>
+                            </div>
+                        </li>
+                        <li class="news__item news__tag-2" >
+                            <a class="news__title news__content ellipsis">
+                                <img class="coverFit" src="image/newsimg/月夕祝颂.jpg">
+                                <div class="news__info">
+                                    <h3 class="ellipsis" title="《原神》「浪沫的旋舞」优菈角色主题同人征集活动今日开启">《原神》「浪沫的旋舞」优菈角色主题同人征集活动今日开启</h3>
+                                    <p class="news__summary"></p>
+                                </div>
+                            </a>
+                            <div class="news__meta">
+                                <div class="news__date">2021/11/04</div>
+                                <a class="news__category news__cate-2">新闻</a>
+                            </div>
+                        </li>
+                        <li class="news__item news__tag-2">
+                            <a class="news__title news__content ellipsis">
+                                <img class="coverFit" src="image/newsimg/蒙德茶会.jpg">
+                                <div class="news__info">
+                                    <h3 class="ellipsis" title="《原神》小剧场——「蒙德茶会」第四期">《原神》小剧场——「蒙德茶会」第四期</h3>
+                                    <p class="news__summary"></p>
+                                </div>
+                            </a>
+                            <div class="news__meta">
+                                <div class="news__date">2021/11/04</div>
+                                <a class="news__category news__cate-2">新闻</a>
+                            </div>
+                        </li>
+                        <li class="news__item news__tag-2">
+                            <a class="news__title news__content ellipsis">
+                                <img class="coverFit" src="image/newsimg/祈愿概率.png">
+                                <div class="news__info">
+                                    <h3 class="ellipsis" title="《原神》小剧场——「蒙德茶会」第四期">《原神》小剧场——「蒙德茶会」第四期</h3>
+                                    <p class="news__summary"></p>
+                                </div>
+                            </a>
+                            <div class="news__meta">
+                                <div class="news__date">2021/11/04</div>
+                                <a class="news__category news__cate-2">新闻</a>
+                            </div>
+                        </li>
+                       </ul>
+                        
+                   </ul>
+               </ul>
+              <!-- 加载更多 -->
+              <li class="news__more">加载更多</li>
+            </div>
+        </div>
+    </div>
+
+
+	<div class="footer" id="footer">
+		<ul class="footer__socialbar">
+			<li class="footer__socialitem"><a>
+				<img src=image/新浪微博1..png alt="" id="socialitemImg1">
+			</a>
+		</li>
+			<li class="footer__socialitem"><a><img src="image/微信 (2).png" alt=""id="socialitemImg2"></a></li>
+			<li class="footer__socialitem"><a><img src="image/qq.png" alt=""id="socialitemImg3"></a></li>
+			<li class="footer__socialitem">
+				<div class="share__wrap">
+					<p>分享至</p>
+					<ul class="qxtc">
+						<li><img src="image/QQ空间.png"></li>
+						<li><img src="image/qq (2).png"></li>
+						<li><img src="image/微博 (2).png"></li>
+						<li><img src="image/social-tieba.png"></li>
+					</ul>
+				</div>
+				<a class="share__wrap_Tc">
+					<img src="image/分享方式.png" alt=""id="socialitemImg4">
+				</a>
+			</li>
+        
+		</ul>
+       
+	</div>
+		<img src="image/footer.png" class="footerster" id="footerster">
+		<div class="fooer" id="fooer"></div>
+            
+	
+</body>
+ <!-- Swiper JS -->
+ <script src="js/swiper-bundle.min.js"></script>
+<script src="js/header.js"></script>
+<script src="js/index.js"></script>
+<script src="js/move.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/tab_con.js"></script>
+<script src="js/movers.js"></script>
+<script src="js/news.js"></script>
+</html>
